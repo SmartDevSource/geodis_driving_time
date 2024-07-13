@@ -1,0 +1,85 @@
+::-moz-selection {
+  background: rgb(224, 224, 224);
+}
+
+::selection {
+  background: rgb(224, 224, 224);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.textarea_data_column {
+  height: 300px;
+  margin: 20px;
+  resize: none;
+  border-radius: 5px;
+}
+
+.stylized_button {
+  border: 2px solid rgb(81, 81, 81);
+  color: rgb(48, 48, 48);
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition: .2s;
+  border-radius: 5px;
+}
+
+.stylized_button:hover{
+  background-color: rgb(255, 229, 168);
+  transition: .2s;
+}
+
+.output_log{
+  border: 1px solid black;
+  width: 25%;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgb(222, 222, 222);
+  text-align: start;
+}
+
+.input_output_container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bg_soft_green {
+  background-color: rgb(169, 208, 42);
+}
+
+.bg_soft_orange {
+  background-color: rgb(244, 177, 131);
+}
+
+.bg_soft_blue {
+  background-color: rgb(142, 169, 219);
+}
+
+.bg_soft_yellow {
+  background-color: rgb(255, 217, 102);
+}
+
+.box_meters {
+  user-select: none;
+  font-size: 20px;
+  padding: 5px;
+  width: 100px;
+  border: 1px solid rgb(122, 122, 122);
+}
+
+.box_info {
+  user-select: none;
+  font-size: 20px;
+  padding: 5px;
+  width: 200px;
+  border: 1px solid rgb(122, 122, 122);
+}
