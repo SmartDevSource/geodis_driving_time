@@ -43,7 +43,7 @@ export const getPathData = ({data, sheetPlan}) => {
                     current_prefix != next_prefix)
                 {
                     sum += vertical_distance
-                    output.push({compared: `${current_element} => ${next_element}`, best_way: 'milieu', meters: vertical_distance + lateral_distance})
+                    output.push({compared: `${current_element} => ${next_element}`, best_way: 'par le pont', meters: vertical_distance + lateral_distance})
                 } else if (current_prefix == next_prefix){
                     sum += vertical_distance
                     output.push({compared: `${current_element} => ${next_element}`, best_way: 'même allée', meters: vertical_distance})
@@ -53,7 +53,7 @@ export const getPathData = ({data, sheetPlan}) => {
                                             current_distance >= mid_max ? current_distance - mid_max : 
                                             0) + vertical_distance
                     const by_up = ((range_length + 1) - current_distance) + ((range_length + 1) - next_distance)
-                    const getter = {[by_down]: "bas", [by_mid]: "milieu", [by_up]: "haut"}
+                    const getter = {[by_down]: "par le début d'allée", [by_mid]: "par le pont", [by_up]: "par le fond d'allée"}
 
                     if (by_down == by_mid){
                         sum += by_mid

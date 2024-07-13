@@ -39,7 +39,7 @@ export const OutputLog = ({data}) => {
                             <span key = {index} style={{color: 'red'}}> {output.meters} </span>
                             mètres.
                         </p>
-                        <p>_____________________________________________</p>
+                        <p>_______________________________________</p>
                         </>
                     )
                 })}
