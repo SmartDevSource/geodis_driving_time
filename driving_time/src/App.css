@@ -77,10 +77,11 @@ body{
   font-size: 16px;
   padding-left: 5px;
   padding-right: 5px;
-  background-color: rgb(222, 222, 222);
+  background-color: rgb(255, 255, 255);
   text-align: start;
   max-height: 450px;
   overflow-y: scroll;
+  opacity: 1;
 }
 
 .input_output_container{
