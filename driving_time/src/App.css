@@ -18,6 +18,26 @@ body{
   text-align: center;
 }
 
+.dee_span {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  animation: scaling 4s linear;
+}
+
+@keyframes scaling {
+  0%{
+    transform: scale(1, 1) translateX(-50%);
+  }
+  100%{
+    transform: scale(3, 3) translateX(-15%);
+    display: none;
+  }
+}
+
 .textarea_data_column {
   height: 400px;
   margin: 20px;
