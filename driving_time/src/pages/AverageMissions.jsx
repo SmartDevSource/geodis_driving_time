@@ -186,7 +186,7 @@ export const AverageMissions = ({sheetPlan}) => {
             {/* <span>Moyenne : {(rightTotals.average / Object.keys(firstWayData).length).toFixed(2)}</span> */}
             </div>
           </div>
-          <span className="span_mission" style={{backgroundColor: 'rgb(67, 67, 68)'}}><b>Diffence de distances</b></span>
+          <span className="span_mission" style={{backgroundColor: 'rgb(67, 67, 68)'}}><b>Difference de distance moyenne</b></span>
           <span className="span_total">
           {((leftTotals.meters / leftTotals.pickings) - (rightTotals.meters / rightTotals.pickings)).toFixed(2)}
           </span>
