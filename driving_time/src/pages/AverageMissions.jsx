@@ -163,18 +163,20 @@ export const AverageMissions = ({sheetPlan}) => {
           <div className='input_output_container'>
             <div className='sub_mission_container'>
               <span>Mètres : {leftTotals.meters}</span>
+              <span>Kilomètres : {(leftTotals.meters / 1000).toFixed(2)}</span>
               <span>Moyennes : {leftTotals.average.toFixed(2)}</span>
               <span>Pickings : {leftTotals.pickings}</span>
             </div>
             <div className='sub_mission_container'>
               <span>Mètres : {rightTotals.meters}</span>
+              <span>Kilomètres : {(rightTotals.meters / 1000).toFixed(2)}</span>
               <span>Moyennes : {rightTotals.average.toFixed(2)}</span>
               <span>Pickings : {rightTotals.pickings}</span>
             </div>
           </div>
           <div className='input_output_container'>
-            <span className="sub_span_mission">Moyennes totales 1</span>
-            <span className="sub_span_mission">Moyennes totales 2</span>
+            <span className="sub_span_mission">Moyenne 1</span>
+            <span className="sub_span_mission">Moyenne 2</span>
           </div>
           <div className='input_output_container'>
             <div className='sub_mission_container'>

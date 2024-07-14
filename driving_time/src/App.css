@@ -197,6 +197,7 @@ body{
 .sub_mission_container {
   display: flex;
   width: 50%;
+  text-align: start;
   flex-direction: column;
 }
 
