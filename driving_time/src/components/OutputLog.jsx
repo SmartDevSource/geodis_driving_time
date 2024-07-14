@@ -1,4 +1,13 @@
-export const OutputLog = ({data}) => {
+import { useEffect } from "react"
+
+export const OutputLog = ({data, type}) => {
+
+    useEffect(()=>{
+        if (data){
+            console.log(data)
+        }
+    }, [data])
+
     return (
         <>
             <div className="output_log" 
@@ -6,7 +15,8 @@ export const OutputLog = ({data}) => {
                 spellCheck={false}
                 suppressContentEditableWarning={true}
             >
-                {data &&
+                {/* COMPARE WAYS SIDE */}
+                {data && type == 'compare_ways' &&
                 <>
                 {data.errors.map((err, index) => {
                     return (
@@ -22,13 +32,13 @@ export const OutputLog = ({data}) => {
                     return (
                         <div key = {`output_${index}`}>
                             <p>
-                                Pour <span key = {index} style={{color: 'green'}}> {output.compared} </span>
+                                Pour <span key = {index} style={{color: 'green'}}> {output.compared} </span> :
                             </p>
                             <p>
-                                Le meilleur chemin est : <span key = {index} style={{color: 'purple'}}> "{output.best_way}" </span>
+                                Le meilleur chemin est : <span key = {index} style={{color: 'purple'}}> "{output.best_way}". </span>
                             </p>
                             <p>
-                                Pour une distance de
+                                Distance :
                                 <span key = {index} style={{color: 'red'}}> {output.meters} </span>
                                 mètres.
                             </p>
@@ -36,6 +46,20 @@ export const OutputLog = ({data}) => {
                         </div>
                     )
                 })}
+                </>
+                }
+                {/* AVERAGES MISSIONS SIDE */}
+                {data && type == 'averages_missions' &&
+                <>
+                    {Object.entries(data).map(([key, value]) => (
+                        <div key = {key}>
+                            <span className="span_mission">Mission <b>{key}</b></span>
+                            <p>Nombre de mètres : <b>{value.total_meters}</b></p>
+                            <p>Moyenne de mètres : <b>{value.average}</b></p>
+                            <p>Nombre de pickings : <b>{value.pickings}</b></p>
+                        </div>
+                    ))}
+
                 </>
                 }
             </div>

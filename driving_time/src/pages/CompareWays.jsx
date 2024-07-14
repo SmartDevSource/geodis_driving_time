@@ -50,7 +50,7 @@ export const CompareWays = ({sheetPlan}) => {
                     onHandleOutput={(first, second) => handleCalcOutput(first, second)}
         />
         <div className='input_output_container'>
-            {leftOutputData && <OutputLog data = {leftOutputData} />}
+            {leftOutputData && <OutputLog data = {leftOutputData} type={"compare_ways"}/>}
             <div className='vertical_container'>
             <button className="link_button" 
                     style={{marginTop: "10px"}}
@@ -69,9 +69,9 @@ export const CompareWays = ({sheetPlan}) => {
             </button>
             <DataInput wayData={data => handleWayData('second', data)} formatedData={secondWayData}/>
             </div>
-            {rightOutputData && <OutputLog data = {rightOutputData} />}
+            {rightOutputData && <OutputLog data = {rightOutputData} type={"compare_ways"}/>}
         </div>
-        <OutputData leftData = {leftOutputData} rightData = {rightOutputData} />
+        <OutputData leftData = {leftOutputData} rightData = {rightOutputData}/>
         </>
     )
 }

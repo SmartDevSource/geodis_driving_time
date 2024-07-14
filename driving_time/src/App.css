@@ -160,6 +160,46 @@ body{
   padding-top: 10px;
 }
 
+.span_mission {
+  display: block;
+  background-color: rgb(67, 67, 68);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.span_total {
+  display: block;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.sub_span_mission {
+  display: block;
+  background-color: rgb(67, 67, 68);
+  width: 100%;
+  text-align: center;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.averages_missions_container {
+  margin: 0 auto;
+  max-width: 400px;
+  width: 500px;
+  border: 1px solid black;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+.sub_mission_container {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
 @media (max-width: 510px) {
   .navbar{
     height: 50px;

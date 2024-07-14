@@ -6,7 +6,6 @@ export const CalcButton = ({first, second, sheetPlan, onHandleOutput, text}) => 
     const [secondOutput, setSecondOutput] = useState(null)
 
     const handleClick = () => {
-        console.log(first)
         const first_output = getPathData({data: first, sheetPlan: sheetPlan})
         const second_output = getPathData({data: second, sheetPlan: sheetPlan})
         setFirstOutput(first_output)
