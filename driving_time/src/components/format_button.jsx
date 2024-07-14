@@ -5,7 +5,11 @@ export const FormatButton = ({first, second, handleFormatedFirst, handleFormated
             const first_copy = first.split('\n').map(element=>{
                 if (checkFormat(element)){
                     const splitted = element.split('-')
-                    return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
+                    if (splitted[0] != 'E03'){
+                        return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
+                    } else {
+                        return element
+                    }
                 } else {
                     return element
                 }
@@ -16,7 +20,11 @@ export const FormatButton = ({first, second, handleFormatedFirst, handleFormated
             const second_copy = second.split('\n').map(element=>{
                 if (checkFormat(element)){
                     const splitted = element.split('-')
-                    return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
+                    if (splitted[0] != 'E03'){
+                        return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
+                    } else {
+                        return element
+                    }
                 } else {
                     return element
                 }
