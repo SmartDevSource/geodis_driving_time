@@ -10,11 +10,6 @@ export const CalcButton = ({first, second, sheetPlan, onHandleOutput}) => {
         const second_output = getPathData({data: second, sheetPlan: sheetPlan})
         setFirstOutput(first_output)
         setSecondOutput(second_output)
-        setShowDee(true)
-        setTimeout(() => {
-            setShowDee(false)
-        }, 3000);
-        audio.play()
     }
 
     useEffect(()=>{

@@ -18,18 +18,18 @@ export const getPathData = ({data, sheetPlan}) => {
 
         if (checkFormat(current_element) && existInStorage(sheetPlan, current_prefix, current_element)){
             sum = (+current_prefix.slice(1)-1) * lateral_step + sheetPlan[current_prefix][current_element]
-            infos.push(`Distance initiale parcourue : ${sum} mètres.`)
+            infos.push(`Distance initiale : ${sum} mètres.`)
 
             for (let i = 1 ; i < data_splitted.length ; i++){
                 const next_element = data_splitted[i]
                 if (!checkFormat(next_element)){
-                    errors.push(`${next_element} n'est pas au format valide.`)
+                    errors.push(`${next_element} : format invalide.`)
                     continue
                 }
                 const next_prefix = next_element.split('-')[0]
 
                 if (!existInStorage(sheetPlan, next_prefix, next_element)){    
-                    errors.push(`${next_element} n'existe pas dans l'entrepôt.`)
+                    errors.push(`${next_element} : inexistant dans l'entrepôt.`)
                     continue
                 }
 
@@ -76,13 +76,13 @@ export const getPathData = ({data, sheetPlan}) => {
             if (checkFormat(current_element) && existInStorage(sheetPlan, current_prefix, current_element)){
                 const last_distance = (+current_prefix.slice(1)-1) * lateral_step + sheetPlan[current_prefix][current_element]
                 sum += last_distance
-                infos.push(`Distance finale parcourue : ${last_distance} mètres.`)
+                infos.push(`Distance finale : ${last_distance} mètres.`)
             }
         } else {
             if (!checkFormat(current_element)){
-                errors.push("Le premier élément n'est pas un format valide.")
+                errors.push("Premier élément : format invalide.")
             } else if (checkFormat(current_element) && !existInStorage(sheetPlan, current_prefix, current_element)){
-                errors.push("Le premier élément n'existe pas dans l'entrepôt.")
+                errors.push("Premier élément : inexistant dans l'entrepôt.")
             }
         }
     } else if (data_splitted.length == 1){
@@ -94,9 +94,9 @@ export const getPathData = ({data, sheetPlan}) => {
             infos.push(`Un seul élément a été entré, l'aller retour entier a été calculé pour cet élément.`)
         } else {
             if (!checkFormat(current_element)){
-                errors.push("Le premier élément n'est pas un format valide.")
+                errors.push("Premier élément : format invalide.")
             } else if (checkFormat(current_element) && !existInStorage(sheetPlan, current_prefix, current_element)){
-                errors.push("Le premier élément n'existe pas dans l'entrepôt.")
+                errors.push("Premier élément : inexistant dans l'entrepôt.")
             }
         }
     }

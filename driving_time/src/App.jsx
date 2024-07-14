@@ -5,6 +5,7 @@ import { CalcButton } from './components/calc_button'
 import { FormatButton } from './components/format_button'
 import { OutputLog } from './components/output_log'
 import { OutputData } from './components/output_data'
+import { Navbar } from './components/navbar'
 import './App.css'
 
 function App() {
@@ -50,6 +51,8 @@ function App() {
 
   return (
     <>
+      <Navbar/>
+      <p></p>
       {isSheetGenerated &&
       <>
         <FormatButton first = {firstWayData}
@@ -65,10 +68,26 @@ function App() {
       </>
       }
       <div className='input_output_container'>
-        <OutputLog data = {leftOutputData} />
-        <DataInput wayData={data => handleWayData('first', data)} formatedData={firstWayData}/>
-        <DataInput wayData={data => handleWayData('second', data)} formatedData={secondWayData}/>
-        <OutputLog data = {rightOutputData} />
+        {leftOutputData && <OutputLog data = {leftOutputData} />}
+        <div className='vertical_container'>
+          <button className="link_button" 
+                  style={{marginTop: "10px"}}
+                  onClick={()=>setFirstWayData('')}
+          >
+            EFFACER
+          </button>
+          <DataInput wayData={data => handleWayData('first', data)} formatedData={firstWayData}/>
+        </div>
+        <div className='vertical_container'>
+          <button className="link_button"
+                  style={{marginTop: "10px"}}
+                  onClick={()=>setSecondWayData('')}
+          >
+            EFFACER
+          </button>
+          <DataInput wayData={data => handleWayData('second', data)} formatedData={secondWayData}/>
+        </div>
+        {rightOutputData && <OutputLog data = {rightOutputData} />}
       </div>
       <OutputData leftData = {leftOutputData} rightData = {rightOutputData} />
     </>

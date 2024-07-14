@@ -64,6 +64,5 @@ export const generateSheetPlan = () => {
         mid_offset = 0
     }
 
-    console.log(ranges)
     return ranges
 }

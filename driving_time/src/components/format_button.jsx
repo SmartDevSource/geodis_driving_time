@@ -40,7 +40,6 @@ export const FormatButton = ({first, second, handleFormatedFirst, handleFormated
             <button className="stylized_button" onClick={handleClick}>
                 Formater en 00
             </button>
-            <p></p>
         </>
     )
 }
