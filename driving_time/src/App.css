@@ -44,7 +44,7 @@ body{
   resize: none;
   border-radius: 5px;
   /* box-shadow: 7px 7px 10px rgb(255, 235, 189); */
-  font-size: 18px;
+  font-size: 16px;
   opacity: .7;
   border: 2px solid rgb(51, 51, 51);
 }
@@ -61,7 +61,6 @@ body{
   font-weight: bold;
   font-size: 20px;
   transition: .2s;
-  border-radius: 5px;
 }
 
 .stylized_button:hover{
