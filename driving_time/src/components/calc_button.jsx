@@ -1,16 +1,9 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { getPathData } from "../functions/path_data"
-
-import dee_image from '../assets/dee.png'
-import dee_audio from '../assets/dee.ogg'
 
 export const CalcButton = ({first, second, sheetPlan, onHandleOutput}) => {
     const [firstOutput, setFirstOutput] = useState(null)
     const [secondOutput, setSecondOutput] = useState(null)
-    const [showDee, setShowDee] = useState(false)
-    const audio = new Audio()
-    audio.src = dee_audio
-    audio.volume = 1
 
     const handleClick = () => {
         const first_output = getPathData({data: first, sheetPlan: sheetPlan})
@@ -32,11 +25,6 @@ export const CalcButton = ({first, second, sheetPlan, onHandleOutput}) => {
 
     return (
         <>
-            {showDee &&
-            <span className="dee_span">
-                <img src={dee_image}></img>
-            </span>
-             }
             <button className = "stylized_button"
                 onClick={handleClick}>
                 Calculer le gain
