@@ -6,12 +6,6 @@ export const DataInput = ({wayData, formatedData}) => {
         wayData(e.target.value)
     }
 
-    // useEffect(()=>{
-    //     if (formatedData){
-
-    //     }
-    // }, [formatedData])
-
     return (
         <>
             <textarea className = "textarea_data_column" 

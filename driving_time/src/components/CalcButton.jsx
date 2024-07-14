@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { getPathData } from "../functions/path_data"
 
-export const CalcButton = ({first, second, sheetPlan, onHandleOutput}) => {
+export const CalcButton = ({first, second, sheetPlan, onHandleOutput, text}) => {
     const [firstOutput, setFirstOutput] = useState(null)
     const [secondOutput, setSecondOutput] = useState(null)
 
     const handleClick = () => {
+        console.log(first)
         const first_output = getPathData({data: first, sheetPlan: sheetPlan})
         const second_output = getPathData({data: second, sheetPlan: sheetPlan})
         setFirstOutput(first_output)
@@ -22,7 +23,7 @@ export const CalcButton = ({first, second, sheetPlan, onHandleOutput}) => {
         <>
             <button className = "stylized_button"
                 onClick={handleClick}>
-                Calculer le gain
+                {text}
             </button>
             <p></p>
         </>

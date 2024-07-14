@@ -33,7 +33,7 @@ export const FormatButton = ({first, second, handleFormatedFirst, handleFormated
         }
     }
 
-    const checkFormat = element => /^E\d{2}-\d{2}-[A-Z]\d{2}$/.test(element)
+    const checkFormat = element => /^E\d{2}-\d{2}-[A-Z][A-Z0-9]{2}$/.test(element)
 
     return (
         <>

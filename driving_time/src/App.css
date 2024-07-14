@@ -148,6 +148,18 @@ body{
   color: white;
 }
 
+.footer {
+  position: fixed;
+  z-index: 100;
+  bottom: 0%;
+  left: 0%;
+  background-color: #3200e6;
+  height: 30px;
+  width: 100%;
+  color: white;
+  padding-top: 10px;
+}
+
 @media (max-width: 510px) {
   .navbar{
     height: 50px;
