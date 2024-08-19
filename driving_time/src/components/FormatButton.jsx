@@ -5,11 +5,14 @@ export const FormatButton = ({first, second, handleFormatedFirst, handleFormated
             const first_copy = first.split('\n').map(element=>{
                 if (checkFormat(element)){
                     const splitted = element.split('-')
-                    if (splitted[0] != 'E03'){
-                        return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
-                    } else {
-                        return element
-                    }
+                    const last_part = splitted[2].slice(1)
+                    console.log(last_part)
+                        if (isNaN(last_part) || +last_part >= 10){
+                            return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
+                        } else {
+                            return element
+                        }
+
                 } else {
                     return element
                 }
@@ -20,11 +23,14 @@ export const FormatButton = ({first, second, handleFormatedFirst, handleFormated
             const second_copy = second.split('\n').map(element=>{
                 if (checkFormat(element)){
                     const splitted = element.split('-')
-                    if (splitted[0] != 'E03'){
-                        return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
-                    } else {
-                        return element
-                    }
+                    const last_part = splitted[2].slice(1)
+                    console.log(last_part)
+                        if (isNaN(last_part) || +last_part >= 10){
+                            return `${splitted[0]}-${splitted[1]}-${splitted[2][0]}00`
+                        } else {
+                            return element
+                        }
+
                 } else {
                     return element
                 }
