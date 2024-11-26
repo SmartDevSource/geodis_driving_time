@@ -12,9 +12,17 @@
 }
 
 body{
-  background-image: url('./assets/images/bg.jpg');
+  background-image: url('./assets/images/bg.png');
   background-size: cover;
-  font-family: "Quicksand";
+
+}
+
+* {
+  font-family: "Play";
+}
+
+h1{
+  color: white;
 }
 
 #root {
@@ -42,6 +50,7 @@ body{
 .stylized_button {
   margin-left: 20px;
   margin-right: 20px;
+  margin: 5px;
   border: none;
   color: rgb(255, 255, 255);
   background-color: #3200e6;
@@ -50,10 +59,11 @@ body{
   font-family: 'Courier New', Courier, monospace;
   font-family: quicksand;
   padding: 16px;
+  min-width: 200px;
 }
 
 .stylized_button:hover{
-  outline: 2px solid rgb(42, 42, 42);
+  outline: 2px solid rgb(255, 255, 255);
 }
 
 .link_button {
@@ -64,6 +74,8 @@ body{
   font-size: 16px;
   font-family: 'Courier New', Courier, monospace;
   background: none;
+  color: white;
+  margin: 5px;
 }
 
 .link_button:hover{
@@ -203,7 +215,7 @@ body{
 
 @media (max-width: 510px) {
   .navbar{
-    height: 50px;
+    height: 60px;
   }
 }
 
