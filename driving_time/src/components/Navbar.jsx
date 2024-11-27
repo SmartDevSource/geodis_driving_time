@@ -9,6 +9,7 @@ export const Navbar = ({handleClick}) => {
                 >
                     COMPARER DEUX CHEMINS
                 </button>
+                <span className="nav_separator"/>
                 <button
                     className="link_button"
                     style={{color: 'white', fontWeight: 'normal'}}

@@ -28,6 +28,9 @@ body {
 
 h1 {
   color: white;
+  margin: 50px;
+  background-color: rgba(112, 112, 112, 0.498);
+  border-radius: 5px;
 }
 
 #root {
@@ -158,9 +161,13 @@ h1 {
   top: 0%;
   left: 0%;
   background-color: #3200e6;
-  height: 30px;
+  height: auto;
   width: 100%;
   color: white;
+}
+
+.nav_separator::before {
+  content: '-';
 }
 
 .footer {
@@ -218,7 +225,10 @@ h1 {
 
 @media (max-width: 510px) {
   .navbar{
-    height: 60px;
+    height: auto;
+  }
+  .nav_separator::before {
+    content: "";
   }
 }
 
